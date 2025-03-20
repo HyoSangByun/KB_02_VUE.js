@@ -27,6 +27,8 @@
         methods: {
           deposit() {
             let amt = parseInt(this.amount);
+            // parseInt는 소숫점 때문
+            // console.log(this.amount);
             if (amt <= 0) {
               alert('0보다 큰 값을 예금하시오.');
             } else {
