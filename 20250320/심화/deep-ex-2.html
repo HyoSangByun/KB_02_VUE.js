@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- 입력 -->
+      <div>
+        <h3>입력</h3>
+        <textarea
+          placeholder="내용을 입력하세요"
+          v-model="message"
+          @keyup.shift.enter.exact="handleShiftEnter"
+          @keyup.enter.exact="handleEnter"
+        ></textarea>
+        <br />
+        다음 줄 : shift + enter <br />입력 완료 : enter
+        <br />
+        출력결과 : {{message}}
+      </div>
+
+      <!-- history -->
+      <div v-model="database">
+        <h3>출력</h3>
+        <div v-for="(text, index) in database" :key="index">
+          <span v-html="text"></span>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      const database = [];
+
+      const vm = Vue.createApp({
+        name: 'App',
+        data() {
+          return {
+            message: '',
+            database,
+          };
+        },
+        methods: {
+          handleEnter(e) {
+            e.preventDefault();
+            this.database.unshift({
+              id: Date.now(),
+              text: this.message,
+            });
+            this.message = '';
+          },
+          handleShiftEnter(e) {
+            e.preventDefault();
+            this.message += '\n';
+          },
+        },
+      }).mount('#app');
+    </script>
+  </body>
+</html>
