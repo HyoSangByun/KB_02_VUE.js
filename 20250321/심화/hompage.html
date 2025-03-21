@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본문제</title>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+
+    <!-- bootstrap js -->
+    <link rel="stylesheet" href="./bootstrap.bundle.min.js" />
+    <style>
+      /* 네비게이션바 그림자 효과 */
+      .navbar {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 배경 이미지 스타일 */
+      .hero-section {
+        background: url('https://vrthumb.imagetoday.co.kr/2023/01/18/td0131t263879.jpg')
+          center/cover no-repeat;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 배경 이미지 + 글귀 -->
+    <div class="hero-section">
+      <div class="text-center">
+        <h1 class="fw-bold">Fullstack Study</h1>
+        <p class="fs-5">Vue + Java 기반의 풀스택 기술을 배웁니다.</p>
+      </div>
+    </div>
+
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary text-white">
+      <div class="container">
+        <!-- 로고와 메뉴를 나란히 정렬 -->
+        <div class="d-flex align-items-center">
+          <a class="navbar-brand text-white me-3" href="#">
+            <i class="fa-solid fa-home"></i> Fullstack
+          </a>
+          <!-- 메뉴 리스트 -->
+          <ul class="navbar-nav d-flex flex-row">
+            <li class="nav-item">
+              <a class="nav-link text-white px-2" href="#">메뉴1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-2" href="#">메뉴2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-2" href="#">메뉴3</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 우측 로그인 버튼 -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <i class="fa-solid fa-circle-user"></i> User01
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">
+                <i class="fa-solid fa-right-from-bracket"></i> 로그아웃
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 컨텐츠 -->
+    <div class="container mt-4">
+      <h1><i class="fa-solid fa-list"></i> 글 목록</h1>
+
+      <!-- 반응형 테이블 -->
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>등록일</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><a href="#">글 제목 1</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><a href="#">글 제목 2</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><a href="#">글 제목 3</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><a href="#">글 제목 4</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><a href="#">글 제목 5</a></td>
+              <td>user01</td>
+              <td>2025-03-21</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 페이징 & 글쓰기 버튼 -->
+      <div
+        class="pagination-container d-flex justify-content-between align-items-center mt-4 flex-wrap"
+      >
+        <!-- 페이지네이션 -->
+        <ul class="pagination mb-0">
+          <li class="page-item">
+            <a class="page-link" href="#"
+              ><i class="fa-solid fa-angles-left"></i
+            ></a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#"
+              ><i class="fa-solid fa-angle-left"></i
+            ></a>
+          </li>
+          <li class="page-item">
+            <a class="page-link active text-white" href="#">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link active text-white" href="#">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link active text-white" href="#">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link active text-white" href="#">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link active text-white" href="#">5</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#"
+              ><i class="fa-solid fa-angle-right"></i
+            ></a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="#"
+              ><i class="fa-solid fa-angles-right"></i
+            ></a>
+          </li>
+        </ul>
+
+        <!-- 글쓰기 버튼 -->
+        <button class="btn btn-primary write-btn">
+          <i class="fa-solid fa-pen-to-square"></i> 글쓰기
+        </button>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="text-center mt-4 py-3 bg-light">
+      © 2024.05 created by fullstack
+    </footer>
+  </body>
+</html>

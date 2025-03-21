@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="bootstrap.min.css" />
+
+    <!-- bootstrap js -->
+    <link rel="stylesheet" href="bootstrap.bundle.min.js" />
+  </head>
+  <body>
+    <div class="container">
+      <h1><i class="fa-solid fa-pen-to-square mb-5">새 글쓰기</i></h1>
+      <!-- texts -->
+      <div>
+        <div class="form-group row">
+          <label> 제목</label>
+          <div class="col-sm-8 mt-2">
+            <input type="text" id="a1" class="form-control" />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label> 작성자</label>
+          <div class="col-sm-8 mt-2">
+            <input type="text" id="a1" class="form-control" />
+          </div>
+        </div>
+
+        <!-- textarea, form-control -->
+        <div class="form-group row">
+          <label> 내용</label>
+          <div class="col-sm-8">
+            <textarea
+              cols="30"
+              rows="5"
+              class="form-control"
+              style="resize: none"
+            >
+            </textarea>
+          </div>
+        </div>
+      </div>
+      <!-- buttons -->
+      <button class="btn btn-primary mt-3">
+        <i class="fa-solid fa-check"></i> 확인
+      </button>
+      <button class="btn btn-primary mt-3">
+        <i class="fa-solid fa-rotate-left"></i> 취소
+      </button>
+      <button class="btn btn-primary mt-3">
+        <i class="fa-solid fa-list"></i> 목록
+      </button>
+    </div>
+  </body>
+</html>
