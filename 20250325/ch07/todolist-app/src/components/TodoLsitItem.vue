@@ -50,20 +50,3 @@ export default {
   },
 };
 </script>
-<template>
-  <div id="app" class="container">
-    <div class="card card-body bg-light">
-      <div classe="title">:: Todolist App</div>
-    </div>
-    <div class="card card-default card-borderless">
-      <div class="card-body">
-        <InputTodo @add-todo="addTodo" />
-        <TodoList
-          :todoList="todoList"
-          @delete-todo="deleteTodo"
-          @toggle-completed="toggleCompleted"
-        />
-      </div>
-    </div>
-  </div>
-</template>
