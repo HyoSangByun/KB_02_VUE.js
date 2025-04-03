@@ -149,7 +149,6 @@ const toggleDone = async (id) => {
 provide(
   'todoList',
   computed(() => states.todoList)
-  //computed로 states.todoList를 감싸서 자식 레벨에서 반응형으로 감지할 수 있다
 );
 
 provide('actions', {
